@@ -6,7 +6,7 @@ class Scraper:
 		self.site = site
 
 	def scrape(self):
-		r = urllib.request.urlopen(selft.site)
+		r = urllib.request.urlopen(self.site)
 		html = r.read()
 		parser = "html.parser"
 		sp = BeautifulSoup( html, parser )
