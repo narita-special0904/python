@@ -12,11 +12,12 @@ class Scraper:
 		sp = BeautifulSoup( html, parser )
 
 		for tag in sp.find_all("a"):
-			utl = tag.get("href")
+			url = tag.get("href")
 			if url is None:
 				continue
-			if "html" in url:
+			if "https" in url:
 				print("\n" + url)
 
-news = "https://news.google.com"
+#news = "https://news.google.com/"
+news = "https://news.google.com/?hl=ja&gl=JP&ceid=JP:ja"
 Scraper(news).scrape()
